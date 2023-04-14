@@ -48,7 +48,7 @@ namespace Aula_15
             escolha = char.Parse(Console.ReadLine());
             if(escolha == 's' || escolha == 'S')
             {
-                goto inicio; // chama a label inicio comando goto praticamente um lação só que menos robusto.
+                goto inicio; // chama a label inicio comando goto praticamente um laço só que menos robusto.
             }
             else
             {
