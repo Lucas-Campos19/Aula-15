@@ -10,6 +10,9 @@ namespace Aula_15
     {
         static void Main(string[] args)
         {
+            // Comando goto
+            inicio: // especifica a label onde o programador quer que o usuario retorne o programa novamente
+            Console.Clear();
             int minutos = 0;
             Console.WriteLine("Tempo de viagem Belo Horizonte(MG) a Vitoria(ES)");
             Console.WriteLine("Escolha a forma da viagem escolhida: [a]Avião || [c]Carro || [o]Ônibus");
@@ -40,6 +43,17 @@ namespace Aula_15
             else
             {
                 Console.WriteLine("O tempo de viagem escolhido é de {0} minutos", minutos);
+            }
+            Console.Write("Calcular o tempo de viagem novamente: [s/n]: ");
+            escolha = char.Parse(Console.ReadLine());
+            if(escolha == 's' || escolha == 'S')
+            {
+                goto inicio; // chama a label inicio comando goto praticamente um lação só que menos robusto.
+            }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Fim do programa");
             }
             Console.ReadKey();
         }
